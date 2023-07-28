@@ -35,6 +35,10 @@ using (var scope = app.Services.CreateScope())
     dataSeed.SeedData(20, 1000);
 }
 
+
 app.MapControllers();
 
+app.MapGet("/", () => "Hello world");
+
 app.Run();
+
